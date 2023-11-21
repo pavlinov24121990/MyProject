@@ -1,18 +1,21 @@
 import React from 'react';
 import { RiSearchLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import { ReactComponent as LogoCenter } from '../Foto/NavPanel/LogoCenter.svg';
 import { ReactComponent as Cart } from "../Foto/NavPanel/Cart.svg";
 import { ReactComponent as Heart } from "../Foto/NavPanel/Heart.svg";
 import { ReactComponent as User } from "../Foto/NavPanel/User.svg";
+import { ReactComponent as LogoFirst } from "../Foto/NavPanel/LogoFirst.svg";
 import "../scss/NavPanel.scss"
 import { flipInY, rotateOut } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
+import { ReactComponent as LogoCenter } from '../Foto/NavPanel/LogoCenter.svg';
+
+
 
   const SvglFlipY = styled.div`animation: 10s ${keyframes`${rotateOut}`} infinite`;
   const SvglFlipInY = styled.div`animation: 10s ${keyframes`${flipInY}`} infinite`; 
 
-const NavPanel = () => {
+const NavPanel = ({ isFirstPage }) => {
 
   return (
     <nav className="nav_panel">
@@ -25,7 +28,7 @@ const NavPanel = () => {
         </ul>
       </div>
       <div>
-        <SvglFlipInY><SvglFlipY><LogoCenter /></SvglFlipY></SvglFlipInY>
+        {isFirstPage ? <LogoFirst /> : <SvglFlipInY><SvglFlipY><LogoCenter /></SvglFlipY></SvglFlipInY>}
       </div>
       <div>
         <form>
