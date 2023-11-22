@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 21px;
+  padding-top: 20px;
   div:first-child {
     width: 100%;
     ul {
@@ -68,5 +68,8 @@
         }
       }
     }
+  }
+  .logo {
+    max-width: 130px;
   }
 }

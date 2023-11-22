@@ -27,7 +27,7 @@ const NavPanel = ({ isFirstPage }) => {
           <li><Link to="/">SALE</Link></li>
         </ul>
       </div>
-      <div>
+      <div className="logo">
         {isFirstPage ? <LogoFirst /> : <SvglFlipInY><SvglFlipY><LogoCenter /></SvglFlipY></SvglFlipInY>}
       </div>
       <div>
